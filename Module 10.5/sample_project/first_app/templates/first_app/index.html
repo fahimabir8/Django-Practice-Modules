@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>HELLO!!</h3>
+
+    <p>length of a list</p>
+    {{ list | length }}
+
+    <h5>incrementing</h5>
+    {{val | add:"3"}}
+
+    <p>slashes</p>
+    {{quote | addslashes}}
+
+    <p>capital</p>
+    {{quote | capfirst}}
+
+    <h4>center</h4>
+    "{{quote | center:"15"}}"
+
+    <h2>Time</h2>
+    <h2>{{cur_time | date:"D d M Y"}}</h2>
+
+    {{ans | default:"nothing"}}
+
+    <h4>sorting</h4>
+    {{data | dictsort:"age"}}
+    
+    <h5>4/2 ? {{val | divisibleby:"2"}}</h5>
+
+    <h2>File size {{file | filesizeformat}}</h2>
+    <h3>first element- {{list | first}}</h3>
+    <h3>last element- {{list | last}}</h3>
+
+    <h4>join</h4>
+    {{list | join:"///"}}
+
+    <!-- <h4>{{merit | linenumbers}}</h4> -->
+    <h1>{{manga | make_list}}</h1>
+    <p>random - {{list | random}}</p>
+
+    <h2>{{list | slice:":2"}}</h2>
+    <h3>slugify - {{test | slugify}}</h3>
+    <p>upper - {{quote | upper}}</p>
+    <p>lower - {{quote | lower}}</p>
+    <h4>{{state | truncatechars:6}}</h4>
+    <p>word count- {{state | wordcount}}</p>
+    <h4>{{state | truncatewords:2}}</h4>
+    <h2>You have {{num_message}} message{{num_message | pluralize}}</h2>
+    <h2>You have {{num_tomato}} tomato{{num_tomato | pluralize:"es"}}</h2>
+    <h2>You have {{num_cherr}} cherr{{num_cherr | pluralize:"y,ies"}}</h2>
+</body>
+</html>
