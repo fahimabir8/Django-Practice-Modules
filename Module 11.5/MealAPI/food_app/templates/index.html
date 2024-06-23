@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="box mx-5 mt-4 row">
+    {% for data in meal %}
+    <div class="card col-4 m-4" style="width: 18rem;">
+        <img src="{{data.strMealThumb}}" class="card-img-top" alt="...">
+        <div class="card-body ">
+            <h5 class="card-title">{{data.strMeal}}</h5>    
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio distinctio debitis eveniet nisi saepe ipsum velit id cumque, quaerat repellat doloremque! Qui rerum velit obcaecati laudantium ipsa nam, nihil harum.</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}
